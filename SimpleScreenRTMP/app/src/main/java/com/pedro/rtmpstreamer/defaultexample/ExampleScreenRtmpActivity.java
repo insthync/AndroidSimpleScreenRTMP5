@@ -42,6 +42,7 @@ public class ExampleScreenRtmpActivity extends AppCompatActivity
         button = (Button) findViewById(R.id.b_start_stop);
         button.setOnClickListener(this);
         etUrl = (EditText) findViewById(R.id.et_rtmp_url);
+        etUrl.setText("rtmp://188.166.191.129/live/insthync");
         rtmpBuilder = new ScreenRtmpBuilder(this);
 
         mediaProjectionManager = (MediaProjectionManager) getSystemService(MEDIA_PROJECTION_SERVICE);
@@ -146,6 +147,8 @@ public class ExampleScreenRtmpActivity extends AppCompatActivity
     public void onClick(View view) {
         if (!rtmpBuilder.isStreaming()) {
             button.setText(getResources().getString(R.string.stop_button));
+            Intent captureIntent = mediaProjectionManager.createScreenCaptureIntent();
+            startActivityForResult(captureIntent, REQUEST_CODE);
         } else {
             button.setText(getResources().getString(R.string.start_button));
             rtmpBuilder.stopStream();
