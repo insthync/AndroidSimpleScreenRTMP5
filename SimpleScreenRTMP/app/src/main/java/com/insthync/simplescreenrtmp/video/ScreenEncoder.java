@@ -41,7 +41,7 @@ public class ScreenEncoder {
     private int height = 480;
     private int fps = 30;
     private int bitRate = 1200 * 1024; //in kbps
-    private FormatVideoEncoder formatVideoEncoder = FormatVideoEncoder.YUV420Dynamical;
+    private FormatVideoEncoder formatVideoEncoder = FormatVideoEncoder.SURFACE;
 
     public ScreenEncoder(GetH264Data getH264Data) {
         this.getH264Data = getH264Data;

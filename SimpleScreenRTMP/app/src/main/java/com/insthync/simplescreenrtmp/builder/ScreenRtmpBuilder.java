@@ -1,7 +1,5 @@
 package com.insthync.simplescreenrtmp.builder;
 
-import android.graphics.ImageFormat;
-import android.hardware.Camera;
 import android.media.MediaCodec;
 import android.media.projection.MediaProjection;
 import android.os.Build;
@@ -11,20 +9,13 @@ import com.pedro.encoder.audio.AudioEncoder;
 import com.pedro.encoder.audio.GetAccData;
 import com.pedro.encoder.input.audio.GetMicrophoneData;
 import com.pedro.encoder.input.audio.MicrophoneManager;
-import com.pedro.encoder.input.video.Camera1ApiManager;
-import com.pedro.encoder.input.video.CameraOpenException;
-import com.pedro.encoder.input.video.EffectManager;
-import com.pedro.encoder.input.video.GetCameraData;
 import com.pedro.encoder.video.FormatVideoEncoder;
 import com.pedro.encoder.video.GetH264Data;
-import com.pedro.encoder.video.VideoEncoder;
 
 import net.ossrs.rtmp.ConnectCheckerRtmp;
 import net.ossrs.rtmp.SrsFlvMuxer;
 
 import java.nio.ByteBuffer;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Ittipon on 6/26/17.
@@ -83,12 +74,12 @@ public class ScreenRtmpBuilder implements GetAccData, GetH264Data, GetMicrophone
         srsFlvMuxer.start(url);
         srsFlvMuxer.setVideoResolution(width, height);
         screenEncoder.start();
-        audioEncoder.start();
         if (Build.VERSION.SDK_INT >= 21) {
             mediaProjection.createVirtualDisplay("Recording Display", width,
                     height, 320, 0 /* flags */, screenEncoder.getInputSurface(),
                     null /* callback */, null /* handler */);
         }
+        audioEncoder.start();
         microphoneManager.start();
         streaming = true;
     }
