@@ -42,7 +42,7 @@ public class ExampleScreenRtmpActivity extends AppCompatActivity
         button = (Button) findViewById(R.id.b_start_stop);
         button.setOnClickListener(this);
         etUrl = (EditText) findViewById(R.id.et_rtmp_url);
-        etUrl.setText("rtmp://188.166.191.129/live/insthync");
+        etUrl.setText("rtmp://188.166.191.129/live/insthync3");
         rtmpBuilder = new ScreenRtmpBuilder(this);
 
         mediaProjectionManager = (MediaProjectionManager) getSystemService(MEDIA_PROJECTION_SERVICE);
