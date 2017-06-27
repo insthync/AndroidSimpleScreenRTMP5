@@ -9,9 +9,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f972c0e-75df-47e9-a61a-477246d391c8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/pedro/rtmpstreamer/defaultexample/ExampleScreenRtmpActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/pedro/rtmpstreamer/defaultexample/ExampleScreenRtmpActivity.java" />
-    </list>
+    <list default="true" id="5f972c0e-75df-47e9-a61a-477246d391c8" name="Default" comment="" />
     <ignored path="rtmp-rtsp-stream-client-java.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
